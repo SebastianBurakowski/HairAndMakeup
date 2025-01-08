@@ -136,7 +136,7 @@
 
     &__video {
 
-        background-color: black;
+    background-color: black;
         position: absolute;
         opacity: 0.4;
         z-index: -1;
@@ -184,7 +184,8 @@
     &__arrow {
         position: absolute;
         bottom: 5px;
-        left: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 2rem;
         color: $light-white;
         margin-left: -18px;
