@@ -16,7 +16,7 @@
 .section-heading {
     position: relative;
     font-weight: normal;
-    font-size: 2.3rem;
+    font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
     color: $main-color;
@@ -26,8 +26,4 @@
     &--right {
         text-align: right;
     }
-}
-
-.section-padding {
-    padding: 3em 2em;
 }
