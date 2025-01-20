@@ -10,11 +10,11 @@
 @media (min-width: 768px) {
     .header {
         &__heading {
-            font-size: 5rem;
+            font-size: 6rem;
         }
 
         &__text {
-            font-size: 2rem;
+            font-size: 3rem;
 
 
         }
@@ -41,33 +41,38 @@
 
 //--900--//
 
-@media (min-width: 900px) {}
+@media (min-width: 900px) {
+    .about {
 
-@media (min-width : 992px) {
-    .header {
+        &__title{
+            font-size: 5rem;
+        }
+
+        &__box {
+            width: 55%;
+        }
+
+        &__info {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        &__img {
+            width: 300px;
+            height: 450px;
+            margin-bottom: 0;
+        }
+
         &__heading {
-            font-size: 6rem;
-        }
-
-        &__text {
-            font-size: 2.5rem;
-
+            font-size: 4rem;
 
         }
-
-        &__arrow {
-            font-size: 3rem;
-
-        }
-
-        &__btn {
-            font-size: 2rem;
-
-        }
-
-
     }
 }
+
+@media (min-width : 992px) {}
+
+
 
 //--1024--//
 

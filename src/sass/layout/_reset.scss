@@ -1,3 +1,6 @@
+@use './variables' as *;
+
+
 *,
 *::after,
 *::before {
@@ -10,8 +13,10 @@ html {
     font-family: "Zeyada", cursive;
     font-size: 62.5%;
     scroll-behavior: smooth;
+
 }
 
 body {
+background-color: $light-white;
     font-size: 1.6rem;
 }

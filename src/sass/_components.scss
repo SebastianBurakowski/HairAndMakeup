@@ -1,23 +1,15 @@
 //components
 @use './variables' as *;
 
-.wrapper {
+.wrapper{
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1700px;
 }
-
-.wrapper-portfolio {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1400px;
-}
-
 .section-heading {
-    position: relative;
+    text-align: left;
     font-weight: normal;
     font-size: 4rem;
-    text-align: center;
     text-transform: uppercase;
     color: $main-color;
     letter-spacing: 2px;

@@ -5,30 +5,55 @@
 
 
 @media (min-width: 1200px) {
-        .header {
-                &__heading {
-                    font-size: 7rem;
-                }
-        
-                &__text {
-                    font-size: 3rem;
-        
-        
-                }
-        
-                &__arrow {
-                    font-size: 3rem;
-        
-                }
-        
-                &__btn {
-                    font-size: 2rem;
-        
-                }
-        
-        
-            }
+    .header {
+        &__heading {
+            font-size: 7rem;
+        }
 
-    
+        &__text {
+            font-size: 3rem;
+
+
+        }
+
+        &__arrow {
+            font-size: 3rem;
+
+        }
+
+        &__btn {
+            font-size: 2rem;
+
+        }
+
+
+    }
+
+    .about {
+
+
+        &__title {
+            font-size: 6rem;
+        }
+
+        &__img {
+            width: 400px;
+            height: 600px;
+            margin-bottom: 1em;
+
+        }
+
+        &__heading {
+            font-size: 5rem;
+
+        }
+
+        &__text {
+            font-size: 2.3rem;
+        }
+    }
+
+
+
 
 }
