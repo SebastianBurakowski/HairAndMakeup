@@ -345,12 +345,179 @@
         transform: translate(50%, -50%);
 
     }
+}
 
 
 
+.offers {
+    background-image: $brown-gradient;
+
+    &__title {
+        padding-top: .2em;
+        padding-right: .5em;
+    }
+
+    &__box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid $main-color;
+        border-bottom: 2px solid $main-color;
+        padding: .5em 1em;
+    }
+
+    &__list {
+        text-align: center;
+        margin: 0.5em 0;
+        list-style: none;
+
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: $main-color;
+            cursor: pointer;
+        }
+    }
+
+    &__item {
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
+        font-size: 1.8rem;
+        padding: .5em 1em;
+        border-bottom: 1px solid black;
+        letter-spacing: 1px;
+
+    }
+
+    &__video {
+        position: absolute;
+        opacity: 0;
+    }
+}
+
+.rules {
+    z-index: 2;
+    position: relative;
+    background-image: url(../../../dist/img/header_img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 
 
 
+    &__hero {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.82);
+        width: 100%;
+        height: 200vh;
+    }
 
 
+    &__header {
+        color: $light-white;
+        opacity: 0;
+        text-align: center;
+        font-size: 4.5rem;
+        padding: .5em 0;
+        animation: handleShow 2s ease-in-out forwards;
+    }
+
+    &__title {
+        color: $light-white;
+        text-align: center;
+        font-size: 3rem;
+        padding: 0 .5em;
+    }
+
+    &__boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__items {
+        text-align: center;
+        margin-left: 1em;
+        padding: 1em 1em;
+    }
+
+    &__item {
+        color: $light-white;
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        padding: .2em 0;
+
+    }
+
+    &__back {
+        color: $light-white;
+        display: block;
+        margin-top: 50px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        padding: 0 1em;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    &__faq {
+        margin-top: 2em;
+    }
+}
+
+.acordeon {
+
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: .5em 1em;
+
+    &-box {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
+    }
+
+    &-btn {
+        color: $pure-white;
+        font-size: 2rem;
+        background-color: transparent;
+        padding: .5em 1em;
+        border: none;
+        border-radius: 50px;
+        margin-bottom: 1em;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgba($color: $pure-white, $alpha: 0.4);
+
+    }
+
+    &-info {
+        display: none;
+
+
+        &-text {
+            color: $light-white;
+            font-size: 1.8rem;
+            padding: .5em 1em;
+            border-bottom: 1px solid $pure-white;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+.activeAcordeon {
+    display: flex;
 }

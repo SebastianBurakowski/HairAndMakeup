@@ -69,4 +69,52 @@
         }
     }
 
+    .offers {
+        &__title {
+            font-size: 6rem;
+        }
+
+        &__item {
+            font-size: 2.3rem;
+        }
+
+        &__video {
+
+
+            top: 455px;
+            left: 245px;
+        }
+    }
+
+    .rules {
+
+
+        &__header {
+
+            font-size: 6.5rem;
+
+        }
+
+        &__title {
+
+            font-size: 5.5rem;
+
+        }
+
+        &__item {
+
+            font-size: 2.3rem;
+
+
+
+        }
+    }
+        .acordeon {
+    
+            &-btn {
+                font-size: 2.3rem;
+                width: 800px;
+    
+            }
+        }
 }

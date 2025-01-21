@@ -4,6 +4,10 @@ let sectionTitle;
 let sectionText;
 let heroSection;
 let heroVideos;
+let accordeon;
+let accordeonBtns;
+let accordeonElements;
+
 
 
 const prepareDomElements = () => {
@@ -11,6 +15,9 @@ const prepareDomElements = () => {
     //////// POBIERANIE ELEMENTÓW STRONY //////
 
 
+    accordeon = document.querySelector('.acordeon')
+    accordeonBtns = document.querySelectorAll('.acordeon-btn')
+    accordeonElements = document.querySelectorAll('.acordeon-info')
     aboutSection = document.querySelector('.about')
     sectionImg = document.querySelector('.about__img')
     sectionTitle = document.querySelector('.about__heading')
@@ -21,6 +28,34 @@ const prepareDomElements = () => {
 }
 const windowHeight = window.innerHeight;
 //FUNCTIONS
+
+function ShowAccordeon(){
+    if (this.nextElementSibling.classList.contains('activeAcordeon')) {
+        this.nextElementSibling.classList.remove('activeAcordeon')
+        this.querySelector('.acordeon-span').textContent = '+'
+      
+    } else {
+        closeAllAccordion();
+        this.nextElementSibling.classList.toggle('activeAcordeon')
+        this.querySelector('.acordeon-span').textContent = '-'
+        
+    }
+    
+}
+
+
+const closeAllAccordion = () => {
+    accordeonElements.forEach(el => {
+        el.classList.remove('activeAcordeon')
+    })
+
+    const accordeonBtns = document.querySelectorAll('.acordeon-btn');
+    accordeonBtns.forEach(btn => {
+        const span = btn.querySelector('.acordeon-span');
+        span.textContent = '+'; 
+    });
+
+}
 
 const handleShowAbout = () => {
 
@@ -61,6 +96,9 @@ const prepareDomEvents = () => {
     ////////// WYWOŁANIE FUNKCJI ///////////////////
     window.addEventListener("scroll", handleShowAbout);
     window.addEventListener("scroll", handleShowHero);
+    accordeonBtns.forEach(btn =>
+        btn.addEventListener('click', ShowAccordeon.bind(btn))
+    )
 
 }
 
