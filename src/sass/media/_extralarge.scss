@@ -1,6 +1,11 @@
 // >1200px
 
 
-@media (min-width: 1400px) {
+@media (min-width: 1800px) {
 
+    .hero {
+        &__video {
+            height: 700px;
+        }
+    }
 }

@@ -37,6 +37,14 @@
          }
      }
 
+     .hero {
+         height: 140vh;
+
+         &__video {
+             height: 450px;
+         }
+     }
+
  }
 
 
@@ -87,6 +95,26 @@
 
      }
 
+     .hero {
+         height: 100%;
+         flex-direction: row;
+
+         &__video {
+             height: 350px;
+         }
+
+
+         &__text2 {
+             position: absolute;
+             right: 50%;
+             top: 50%;
+             transform: translate(50%, -50%);
+
+
+         }
+
+
+     }
 
 
  }
@@ -94,4 +122,10 @@
 
  //--670--//
 
- @media (min-width: 670px) {}
+ @media (min-width: 670px) {
+    .hero{
+        &__video{
+            height: 400px;
+        }
+    }
+ }

@@ -27,6 +27,12 @@
 
     }
 
+    .hero {
+        &__video {
+            height: 450px;
+        }
+    }
+
 
 }
 
@@ -44,7 +50,7 @@
 @media (min-width: 900px) {
     .about {
 
-        &__title{
+        &__title {
             font-size: 5rem;
         }
 
@@ -70,10 +76,27 @@
     }
 }
 
-@media (min-width : 992px) {}
+@media (min-width : 992px) {
+
+}
 
 
 
 //--1024--//
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+        .hero {
+                &__video {
+                    height: 500px;
+                }
+        
+
+        
+                &__text2 {
+        
+                    width: 40px;
+                    height: 40px;
+
+            }
+}
+}

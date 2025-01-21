@@ -166,7 +166,7 @@
         text-transform: uppercase;
         color: $light-white;
         margin-bottom: 5em;
-        animation: handleShow 2s ease-in-out 1.5s forwards;
+        animation: handleShowDown 2s ease-in-out 1s forwards;
         // animation: name duration timing-function delay iteration-count direction fill-mode;
 
     }
@@ -210,6 +210,19 @@
     0% {
         opacity: 0;
         transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes handleShowDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-200%);
     }
 
     100% {
@@ -291,9 +304,10 @@
 }
 
 .activeVideo {
-    animation: handleShow 3s ease-in-out forwards;
+    animation: handleShow 1.5s ease-in-out forwards;
 
 }
+
 .hero {
     position: relative;
     display: flex;
@@ -320,14 +334,7 @@
 
 
 
-    &__text {
-        position: absolute;
-        left: 50%;
-        top: 30px;
-        width: 30px;
-        height: 30px;
-        transform: translateX(-50%);
-    }
+
 
     &__text2 {
         position: absolute;
@@ -339,26 +346,11 @@
 
     }
 
-    &__text3 {
-        position: absolute;
-        left: 50%;
-        bottom: 20px;
-        width: 30px;
-        height: 30px;
-        transform: translateX(-50%);
-
-    }
 
 
 
-    &__text5 {
-        opacity: 0;
-        position: absolute;
-        right: 20px;
-        top: 440px;
-        width: 30px;
-        height: 30px;
-    }
+
+
 
 
 }
