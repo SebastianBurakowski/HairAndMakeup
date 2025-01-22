@@ -6,7 +6,21 @@
 
 @media (min-width: 390px) {
 
+    .portfolio {
     
+            &__images {
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+  
+                &--item {
+                    width: 150px;
+                    height: 230px;
+
+                }
+    
+            } 
+}
 }
 
 
@@ -15,6 +29,18 @@
 //--430--//
 
 @media (min-width: 430px) {
+        .portfolio {
+        
+                &__images {
+        
+                    &--item {
+                        width: 170px;
+                        height: 250px;
+        
+                    }
+        
+                }
+            }
 
  
 

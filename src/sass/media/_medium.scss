@@ -46,6 +46,69 @@
         }
     }
 
+    .portfolio {
+
+        &__boxes {
+            display: flex;
+
+        }
+
+        &__images {
+
+            &--item {
+                width: 170px;
+                height: 250px;
+
+            }
+
+        }
+
+        &__box {
+            &--left {
+                width: 65%;
+            }
+
+            &--right {
+                display: flex;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                width: 35%;
+                background-color: $light-green;
+                overflow: hidden;
+            }
+        }
+
+        &__text {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__title {
+            font-family: "Playfair Display", serif;
+            font-weight: normal;
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            color: $main-color;
+            letter-spacing: 2px;
+            text-align: center;
+
+
+        }
+
+        &__info {
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            font-weight: lighter;
+            font-size: 1.6rem;
+            padding: .5em 1em;
+        }
+    }
+
+
+
 }
 
 
@@ -130,13 +193,37 @@
     }
 
     .acordeon {
-        &-box {
-            margin-bottom: 1em;
-        }
+        width: 750px;
+
+        &-box {}
 
         &-btn {
             width: 750px;
-            border: none;
+
+        }
+    }
+
+
+    .portfolio {
+
+
+        &__images {
+
+            &--item {
+                width: 200px;
+                height: 280px;
+
+            }
+
+        }
+
+
+        &__title {
+            font-size: 5rem;
+        }
+
+        &__info {
+            font-size: 2.2rem;
         }
     }
 }
@@ -169,6 +256,29 @@
 
             top: 430px;
             left: 150px;
+        }
+    }
+
+    .portfolio {
+
+
+        &__images {
+
+            &--item {
+                width: 280px;
+                height: 360px;
+
+            }
+
+        }
+
+
+        &__title {
+            font-size: 5rem;
+        }
+
+        &__info {
+            font-size: 2.2rem;
         }
     }
 }

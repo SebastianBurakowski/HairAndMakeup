@@ -171,6 +171,19 @@
      }
 
 
+     .portfolio {
+
+         &__images {
+
+             &--item {
+                 width: 200px;
+                 height: 280px;
+
+             }
+
+         }
+     }
+
  }
 
 
@@ -233,6 +246,19 @@
                  font-size: 2rem;
 
              }
+         }
+     }
+
+     .portfolio {
+
+         &__images {
+
+             &--item {
+                 width: 170px;
+                 height: 250px;
+
+             }
+
          }
      }
  }
