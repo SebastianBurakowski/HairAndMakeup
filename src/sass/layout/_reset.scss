@@ -10,13 +10,14 @@
 }
 
 html {
-
+    font-family: "Dosis", serif;
+    font-weight: lighter;
     font-size: 62.5%;
     scroll-behavior: smooth;
 
 }
 
 body {
-background-color: $light-white;
+    background-color: $second-color;
     font-size: 1.6rem;
 }
