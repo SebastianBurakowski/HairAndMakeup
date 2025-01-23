@@ -149,11 +149,13 @@
 
 
     &__heading {
-        font-family: "Zeyada", cursive;
-        font-weight: normal;
+        font-family: "Linden Hill", serif;
+        font-style: italic;
+        font-weight: lighter;
+
         font-size: 3rem;
         padding: .5em 0;
-        color: $light-white;
+        color: $second-color;
         animation: handleShow 2s ease-in-out;
     }
 
@@ -164,7 +166,7 @@
         font-size: 1.5rem;
         letter-spacing: 10px;
         text-transform: uppercase;
-        color: $light-white;
+        color: $second-color;
         margin-bottom: 5em;
         animation: handleShowDown 2s ease-in-out 1s forwards;
         // animation: name duration timing-function delay iteration-count direction fill-mode;
@@ -175,7 +177,7 @@
         opacity: 0;
         letter-spacing: 1px;
         width: 150px;
-        font-family: "Zeyada", cursive;
+        font-family: "Playfair Display", serif;
         font-size: 1.5rem;
         color: $light-white;
         background-color: transparent;
@@ -251,12 +253,6 @@
 .about {
 
 
-    &__title {
-       
-        padding-top: .2em;
-        padding-left: .5em;
-    }
-
     &__info {
         display: flex;
         justify-content: center;
@@ -291,7 +287,8 @@
     }
 
     &__heading {
-        font-family: "Zeyada", cursive;
+        font-family: "Linden Hill", serif;
+        font-weight: lighter;
         opacity: 0;
         font-size: 3rem;
         padding: .5em 1em;
@@ -302,8 +299,9 @@
 
     &__text {
         opacity: 0;
+        font-family: "Dosis", serif;
+        font-weight: lighter;
         text-align: center;
-        font-family: "Playfair Display", serif;      
         letter-spacing: 1px;
         font-size: 1.8rem;
         padding: 1em 1em;
@@ -342,7 +340,7 @@
         box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.5);
 
         &--second {
-            animation-delay: 1s;
+            animation-delay: .5s;
         }
 
     }
@@ -396,7 +394,7 @@
     }
 
     &__item {
-        font-family: "Playfair Display", serif;
+        font-family: "Dosis", serif;
         font-weight: lighter;
         font-size: 1.8rem;
         padding: .5em 1em;
@@ -420,6 +418,10 @@
     background-size: cover;
     overflow: hidden;
 
+    &__list {
+        border-bottom: 1px solid rgba(194, 193, 193, 0.548);
+    }
+
 
 
     &__hero {
@@ -435,6 +437,7 @@
 
     &__header {
         color: $light-white;
+        font-family: "Playfair Display", serif;
         opacity: 0;
         text-align: center;
         font-size: 4.5rem;
@@ -443,11 +446,12 @@
     }
 
     &__title {
+        font-family: "Playfair Display", serif;
+        font-weight: lighter;
         color: $light-white;
         text-align: center;
         font-size: 3rem;
-        padding: 0 .5em;
-        margin-bottom: 1em;
+        padding: .5em .5em;
     }
 
     &__boxes {
@@ -459,13 +463,13 @@
 
     &__items {
         text-align: center;
-        margin-left: 1em;
-        padding: 1em 1em;
+        list-style: none;
+        padding: 1em 0;
     }
 
     &__item {
         color: $light-white;
-        font-family: "Playfair Display", serif;
+        font-family: "Dosis", serif;
         font-weight: lighter;
         font-size: 1.8rem;
         letter-spacing: 1px;
@@ -474,12 +478,13 @@
     }
 
     &__back {
+        font-family: "Playfair Display", serif;
         color: $light-white;
         display: block;
         margin-top: 50px;
         font-size: 2.2rem;
         font-weight: bold;
-        padding: 0 1em;
+        padding: .5em 1em;
         text-decoration: none;
         letter-spacing: 1px;
     }
@@ -507,9 +512,9 @@
 
     &-box {
         font-size: 1.8rem;
-        letter-spacing: 1px;
-        font-family: "Playfair Display", serif;
+        font-family: "Dosis", serif;
         font-weight: lighter;
+        letter-spacing: 1px;
         margin-bottom: 1em;
 
         &:last-child {
@@ -520,6 +525,8 @@
     }
 
     &-btn {
+        font-family: "Playfair Display", serif;
+        font-weight: lighter;
         color: $pure-white;
         font-size: 2rem;
         padding: .5em 1em;
@@ -557,6 +564,12 @@
 
 
 .portfolio {
+
+    &__video {
+        animation: none;
+        width: 200px;
+        height: 280px;
+    }
 
 
 
@@ -631,9 +644,8 @@
         }
 
         &--text {
-            font-family: "Zeyada", cursive;
             font-size: 2.3rem;
-            font-weight: bold;
+
         }
     }
 

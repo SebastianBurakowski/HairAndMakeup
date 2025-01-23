@@ -78,6 +78,13 @@
          }
      }
 
+     .portfolio {
+         &__video {
+             width: 170px;
+             height: 250px;
+         }
+     }
+
  }
 
 
@@ -113,7 +120,7 @@
 
      .about {
          &__title {
-             font-size: 4.5rem;
+             font-size: 3.5rem;
          }
 
          &__img {
@@ -151,7 +158,7 @@
 
      .offers {
          &__title {
-             font-size: 4.5rem;
+             font-size: 3.5rem;
          }
 
          &__video {
@@ -172,6 +179,11 @@
 
 
      .portfolio {
+
+         &__video {
+             width: 200px;
+             height: 280px;
+         }
 
          &__images {
 
@@ -250,6 +262,11 @@
      }
 
      .portfolio {
+
+         &__video {
+             width: 170px;
+             height: 250px;
+         }
 
          &__images {
 
