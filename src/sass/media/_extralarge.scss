@@ -4,9 +4,10 @@
 @media (min-width: 1400px) {
 
     .offers {
-        &__video {
-            top: 455px;
-            left: 460px;
+
+        &__title {
+            top: 330px;
+            right: 80px;
         }
     }
 
@@ -30,7 +31,7 @@
 
 
         &__title {
-            right: -60px;
+            right: -100px;
         }
 
     }

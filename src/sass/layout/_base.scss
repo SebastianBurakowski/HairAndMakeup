@@ -68,58 +68,13 @@
 
     }
 }
-
-
-.nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: $brown-gradient-solid;
-    z-index: 150;
-    transform: translateY(-120%);
-    transition: transform 1s cubic-bezier(.17, .67, 1, 1.23);
-
-    &--active {
-        transform: translateY(0);
-    }
-
-    &__item {
-        letter-spacing: 1px;
-        text-align: center;
-        font-size: 2rem;
-
-        position: relative;
-        display: block;
-        text-decoration: none;
-        color: $pure-white;
-        text-transform: uppercase;
-        margin: 0.5em 0;
-        padding: 0.5em 0;
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            transform: scaleX(0);
-            transition: transform .5s;
-            background-color: $light-white;
-
-        }
-
-        &:hover::before {
-            transform: scaleX(1);
-        }
-    }
+.nav{
+    display: none;
 }
 
 .header {
+
+
 
 
     z-index: 100;
@@ -277,7 +232,7 @@
             align-items: center;
             background-color: transparent;
             width: 40%;
-            border-right: 1px solid rgba(194, 193, 193, 0.548);
+            
 
         }
 
@@ -327,15 +282,16 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+        padding: 1em 1em;
     background-image: $brown-gradient;
     height: 130vh;
-    padding: 1em 1em;
 
     &__video {
         opacity: 0;
         object-fit: cover;
         height: 400px;
         border-radius: 20px;
+      
         overflow: hidden;
         box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.5);
 
@@ -344,30 +300,21 @@
         }
 
     }
-
-
-
-
-
-    &__text2 {
-        position: absolute;
-        right: 50%;
-        top: 50%;
-        width: 30px;
-        height: 30px;
-        transform: translate(50%, -50%);
-
-    }
 }
 
 
 
 .offers {
-    background-image: $brown-gradient;
+
+    &__desktop{
+        display: none;
+    }
+
+
 
     &__title {
-        padding-top: .2em;
-        padding-right: .5em;
+        padding: .5em 1em;
+
     }
 
     &__box {
@@ -403,10 +350,6 @@
 
     }
 
-    &__video {
-        position: absolute;
-        opacity: 0;
-    }
 }
 
 .rules {
@@ -564,7 +507,13 @@
 
 
 .portfolio {
-    padding: 2em 0;
+
+    &__title{
+        &--desktop{
+            padding: .5em 1em;
+
+        }
+    }
 
     &__video {
         animation: none;
@@ -676,6 +625,7 @@
     }
 
     &__img {
+        opacity: 0;
         z-index: 100;
         position: absolute;
         bottom: -300px;
@@ -683,8 +633,23 @@
         height: 400px;
         width: 300px;
 
+
     }
 
+    .activeReviewImg {
+        animation: handleShowReviewImg 2s ease-in-out forwards;
+    }
+
+    @keyframes handleShowReviewImg {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+    }
 
     &__aside {
 
@@ -698,7 +663,7 @@
         color: $second-color;
         position: relative;
         top: 50%;
-        right: 120px;
+        right: 20px;
         font-family: "Playfair Display", serif;
         font-weight: normal;
         font-size: 12rem;
@@ -721,22 +686,43 @@
 
 
     &__instagram {
+        position: relative;
         display: block;
         text-decoration: none;
-        color: $light-green;
-        font-size: 3rem;
+        color: black;
+        font-size: 2.3rem;
         position: absolute;
         bottom: 50px;
         right: 50px;
         font-family: "Linden Hill", serif;
         font-weight: lighter;
-        border: 1px solid $pure-white;
-        border-radius: 10px;
-        padding: .5em 1em;
-        box-shadow: 8px 8px 13px rgba($color: #2e2e2e2e, $alpha: 0.3);
+        border: none;
+        padding: .2em 0;
+        background-color: transparent;
 
-        animation: btnAnimation 1.5s infinite;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 20%;
+            height: 1px;
+            background-color: black;
+            transform: translateX(-50%);
 
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 20%;
+            height: 1px;
+            background-color: black;
+            transform: translateX(-50%);
+
+        }
 
     }
 
@@ -777,7 +763,7 @@
 
         height: 250px;
         background-color: $pure-white;
-        
+
 
         box-shadow: 5px 5px 5px rgba($color: #2e2e2e2e, $alpha: 0.2);
         border: none;
@@ -790,7 +776,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
 
     }
 

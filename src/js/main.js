@@ -7,7 +7,13 @@ let heroVideos;
 let accordeon;
 let accordeonBtns;
 let accordeonElements;
-
+let portfolioSection;
+let portfolioTitle;
+let reviewSection;
+let reviewTitle;
+let reviewImg;
+let offerSection;
+let offerTitle;
 
 
 const prepareDomElements = () => {
@@ -24,23 +30,31 @@ const prepareDomElements = () => {
     sectionText = document.querySelector('.about__text')
     heroSection = document.querySelector('.hero')
     heroVideos = document.querySelectorAll('.hero__video')
+    portfolioSection = document.querySelector('.portfolio')
+    portfolioTitle = document.querySelector('.portfolio__title')
+    reviewSection = document.querySelector('.review')
+    reviewTitle = document.querySelector('.review__title')
+    reviewImg = document.querySelector('.review__img')
+    offerSection = document.querySelector('.offers__desktop')
+    offerTitle = document.querySelector('.offers__title-desktop')
+
 
 }
 const windowHeight = window.innerHeight;
 //FUNCTIONS
 
-function ShowAccordeon(){
+function ShowAccordeon() {
     if (this.nextElementSibling.classList.contains('activeAcordeon')) {
         this.nextElementSibling.classList.remove('activeAcordeon')
         this.querySelector('.acordeon-span').textContent = '+'
-      
+
     } else {
         closeAllAccordion();
         this.nextElementSibling.classList.toggle('activeAcordeon')
         this.querySelector('.acordeon-span').textContent = '-'
-        
+
     }
-    
+
 }
 
 
@@ -52,7 +66,7 @@ const closeAllAccordion = () => {
     const accordeonBtns = document.querySelectorAll('.acordeon-btn');
     accordeonBtns.forEach(btn => {
         const span = btn.querySelector('.acordeon-span');
-        span.textContent = '+'; 
+        span.textContent = '+';
     });
 
 }
@@ -60,9 +74,9 @@ const closeAllAccordion = () => {
 const handleShowAbout = () => {
 
     const aboutSectionTop = aboutSection.getBoundingClientRect().top;
-    
 
-    if(aboutSectionTop <= windowHeight * 0.6){
+
+    if (aboutSectionTop <= windowHeight * 0.6) {
         sectionImg.classList.add('activeAnimation')
         sectionTitle.classList.add('activeAnimation')
         sectionText.classList.add('activeAnimation')
@@ -72,13 +86,13 @@ const handleShowAbout = () => {
         sectionText.classList.remove('activeAnimation')
     }
 
-    
+
 }
 
 const handleShowHero = () => {
     const heroSectionTop = heroSection.getBoundingClientRect().top;
 
-    if(heroSectionTop <= windowHeight * 0.7){
+    if (heroSectionTop <= windowHeight * 0.7) {
         heroVideos.forEach(video => {
             video.classList.add('activeVideo')
         })
@@ -87,8 +101,58 @@ const handleShowHero = () => {
             video.classList.remove('activeVideo')
         })
     }
-    
+
 }
+
+
+const handlePortfolio = () => {
+    const portfolioSectionTop = portfolioSection.getBoundingClientRect().top;
+
+    if (portfolioSectionTop <= windowHeight * 0.3) {
+        portfolioTitle.classList.add('activeTitle')
+        
+        
+    } else {
+        portfolioTitle.classList.remove('activeTitle')
+    }
+
+}
+
+const handleOffer = () => {
+    const offerSectionTop = offerSection.getBoundingClientRect().top;
+
+    if (offerSectionTop <= windowHeight * 0.4) {
+        offerTitle.classList.add('activeOfferTitle')
+       
+    } else {
+        offerTitle.classList.remove('activeOfferTitle')
+    }
+
+}
+
+const handleReview = () => {
+    const reviewSectionTop = reviewSection.getBoundingClientRect().top;
+
+    if (reviewSectionTop <= windowHeight * 0.7) {
+        reviewTitle.classList.add('activeTitle')
+        reviewImg.classList.add('activeReviewImg')
+    } else {
+        reviewTitle.classList.remove('activeTitle')
+        reviewImg.classList.remove('activeReviewImg')
+    }
+
+
+    if (reviewSectionTop <= windowHeight * 0.4) {
+    
+        reviewImg.classList.add('activeReviewImg')
+
+    } else {
+      
+        reviewImg.classList.remove('activeReviewImg')
+    }
+
+}
+
 
 
 const prepareDomEvents = () => {
@@ -99,6 +163,9 @@ const prepareDomEvents = () => {
     accordeonBtns.forEach(btn =>
         btn.addEventListener('click', ShowAccordeon.bind(btn))
     )
+    window.addEventListener("scroll", handlePortfolio);
+    window.addEventListener("scroll", handleReview);
+    window.addEventListener("scroll", handleOffer);
 
 }
 
