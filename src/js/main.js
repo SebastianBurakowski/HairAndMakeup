@@ -14,6 +14,9 @@ let reviewTitle;
 let reviewImg;
 let offerSection;
 let offerTitle;
+let navMobile;
+let navMobileEl;
+let burgerBtn;
 
 
 const prepareDomElements = () => {
@@ -37,11 +40,34 @@ const prepareDomElements = () => {
     reviewImg = document.querySelector('.review__img')
     offerSection = document.querySelector('.offers__desktop')
     offerTitle = document.querySelector('.offers__title-desktop')
+    navMobile = document.querySelector('.nav__mobile')
+    burgerBtn = document.querySelector('.burger-btn')
+    navMobileEl = document.querySelectorAll('.nav__item--mobile')
 
 
 }
 const windowHeight = window.innerHeight;
 //FUNCTIONS
+
+const handleBurger = () => {
+    burgerBtn.classList.toggle('burger-active')
+    
+}
+
+
+const showNav = () => {
+    navMobile.classList.toggle('navActive')
+    
+}
+
+const handleCloseNavMobile = () => {
+       
+            navMobile.classList.remove('navActive')
+    burgerBtn.classList.remove('burger-active')
+        
+    }
+    
+
 
 function ShowAccordeon() {
     if (this.nextElementSibling.classList.contains('activeAcordeon')) {
@@ -166,6 +192,11 @@ const prepareDomEvents = () => {
     window.addEventListener("scroll", handlePortfolio);
     window.addEventListener("scroll", handleReview);
     window.addEventListener("scroll", handleOffer);
+    navMobileEl.forEach(btn =>
+        btn.addEventListener('click', handleCloseNavMobile)
+    )
+    burgerBtn.addEventListener("click", () => { handleBurger(); showNav(); })
+
 
 }
 

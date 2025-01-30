@@ -9,6 +9,19 @@
 
 
  @media (min-width: 480px) {
+
+     .nav {
+         &__item {
+             &--mobile {
+                 font-size: 2rem;
+             }
+         }
+
+         &__link {
+             font-size: 2rem;
+         }
+     }
+
      .header {
          &__heading {
              font-size: 4rem;
@@ -196,6 +209,18 @@
  //--670--//
 
  @media (min-width: 670px) {
+
+        .nav {
+                &__item {
+                    &--mobile {
+                        font-size: 2.1rem;
+                    }
+                }
+        
+                &__link {
+                    font-size: 2.1rem;
+                }
+            }
      .hero {
          &__video {
              height: 400px;
