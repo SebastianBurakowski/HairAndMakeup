@@ -4,17 +4,23 @@ $(document).ready(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3300,
-        arrows: true,
-        nextArrow:'<button class="review__slick" type="button" ><i class="fa-solid fa-caret-right fa-beat-fade"></i></button>',
-        prevArrow: '<button class="review__slick" type="button" ><i class="fa-solid fa-caret-left fa-beat-fade"></i></button>',
         mobileFirst: true,
-        responsive: [{
-            breakpoint: 770,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
+        arrows: false, // Domyślnie wyłączone dla małych ekranów
+        responsive: [
+            {
+                breakpoint: 430,
+                settings: {
+                    arrows: true, // Włączone od 771px wzwyż
+                    nextArrow: '<button class="review__slick" type="button"><i class="fa-solid fa-caret-right fa-beat-fade"></i></button>',
+                    prevArrow: '<button class="review__slick" type="button"><i class="fa-solid fa-caret-left fa-beat-fade"></i></button>'
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                }
             }
-        }],
-
+        ]
     });
-})
+});

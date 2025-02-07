@@ -167,4 +167,11 @@
         }
 
     }
+
+    .review {
+        &__img {
+            bottom: -350px;
+            left: -150px;
+        }
+    }
 }
