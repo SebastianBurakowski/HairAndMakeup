@@ -24,12 +24,6 @@
 
     }
 
-    .offers {
-        &__title {
-            top: 375px;
-            right: 50px;
-        }
-    }
 }
 
 @media (min-width: 1200px) {
@@ -103,10 +97,7 @@
             font-size: 2.3rem;
         }
 
-        &__title {
-            top: 370px;
-            right: 60px;
-        }
+
     }
 
     .rules {
@@ -162,15 +153,13 @@
         }
 
 
-        &__title {
-            right: -60px;
-        }
+
 
     }
 
     .review {
         &__img {
-            bottom: -350px;
+           
             left: -150px;
         }
     }

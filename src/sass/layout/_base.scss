@@ -84,6 +84,7 @@
         height: 100%;
         right: 0;
         background-color: #dedede79;
+        backdrop-filter: blur(10px);
         border: none;
         border-radius: 40px 0 0 40px;
         transition: transform 2s;
@@ -665,7 +666,7 @@
 
 .review {
     &__box {
-        &--left {
+        &--desktop {
             display: none;
             
         }
@@ -729,7 +730,9 @@
         text-decoration: none;
         color: black;
         font-size: 2.3rem;
+        width: 200px;
         position: absolute;
+        text-align: center;
         bottom: -50px;
         right: 50%;
         transform: translateX(50%);
@@ -802,8 +805,6 @@
 
         height: 300px;
         background-color: $pure-white;
-
-
         box-shadow: 5px 5px 5px rgba($color: #2e2e2e2e, $alpha: 0.2);
         border: none;
 

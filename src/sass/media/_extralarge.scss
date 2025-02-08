@@ -3,22 +3,22 @@
 
 @media (min-width: 1400px) {
 
-    .nav{
-        &__link{
+    .nav {
+        &__link {
             font-size: 2.3rem;
         }
 
-        &__item{
+        &__item {
             font-size: 2.3rem;
         }
     }
 
     .offers {
-
         &__title {
-            top: 330px;
-            right: 80px;
+            font-size: 7rem;
         }
+
+
     }
 
     .portfolio {
@@ -39,11 +39,21 @@
 
         }
 
-
         &__title {
-            right: -100px;
+            font-size: 7rem;
         }
 
+
+    }
+
+    .review {
+        &__title {
+            font-size: 7rem;
+        }
+
+        &__img{
+            left: -200px;
+        }
     }
 
 
@@ -64,6 +74,24 @@
         &__back {
 
             margin-top: 200px;
+        }
+    }
+
+    .offers {
+        &__title {
+            font-size: 8rem;
+        }
+    }
+
+    .portfolio {
+        &__title {
+            font-size: 8rem;
+        }
+    }
+
+    .review {
+        &__title {
+            font-size: 8rem;
         }
     }
 
