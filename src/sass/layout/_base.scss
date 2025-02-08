@@ -668,7 +668,7 @@
     &__box {
         &--desktop {
             display: none;
-            
+
         }
     }
 
@@ -680,23 +680,9 @@
     }
 
     &__img {
-       display: none;
+        display: none;
     }
 
-    .activeReviewImg {
-        animation: handleShowReviewImg 2s ease-in-out forwards;
-    }
-
-    @keyframes handleShowReviewImg {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-
-    }
 
     &__title {
         color: $second-color;
@@ -768,21 +754,6 @@
 
     }
 
-    @keyframes btnAnimation {
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(1.1);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-
-    }
-
 
     &__link {
         display: block;
@@ -837,11 +808,118 @@
     }
 
     &__slick {
-        
+
         color: $pure-white;
         background-color: transparent;
         border: none;
         font-size: 3.5rem;
         cursor: pointer;
+    }
+}
+
+.contact {
+    position: relative;
+    margin-top: 4em;
+    border-top: 1px solid $main-color;
+    background-color: $dark;
+    backdrop-filter: blur(10px);
+
+    &__title {
+        font-family: "Linden Hill", serif;
+        text-align: center;
+        font-weight: normal;
+        font-size: 2.5rem;
+        padding: .5em 1em;
+        text-transform: uppercase;
+        color: $main-color;
+        letter-spacing: 2px;
+
+    }
+
+    &__text{
+        font-size: 2rem;
+        padding: .5em 1em;
+        text-align: center;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__instagram,
+    &__phone,
+    &__facebook {
+        display: block;
+        text-decoration: none;
+        color: $light-white;
+        font-size: 1.8rem;
+        padding: .5em 1em;
+        margin-bottom: .5em;
+        cursor: pointer;
+
+        transition: font-weight 1s, letter-spacing 1s;
+
+
+        &:hover {
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+    }
+
+
+    &__text {
+        color: $light-white;
+    }
+
+    &__hero {
+        opacity: .2;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../../dist/img/contact_bck.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.footer{
+    background-color: black;
+
+    &__title{
+        font-family: "Linden Hill", serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        color:$light-white;
+        font-size: 1.2rem;
+        padding: .5em 2em;
+        text-align: center;
+    }
+
+    &__map{
+        color: $light-white;
+    }
+}
+
+.sitemap{
+    &__title{
+        display: block;
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: $light-white;
+        padding: 1em .5em;
+        cursor: pointer;
+    }
+
+    &__element{
+        display: block;
+        color: $light-white;
+        padding: 0 .5em;
     }
 }

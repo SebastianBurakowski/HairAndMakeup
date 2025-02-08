@@ -36,7 +36,7 @@ const prepareDomElements = () => {
     portfolioSection = document.querySelector('.portfolio')
     portfolioTitle = document.querySelector('.portfolio__title')
     reviewSection = document.querySelector('.review')
-    reviewTitle = document.querySelector('.review__title')
+    reviewTitle = document.querySelector('.review__title--desktop')
     reviewImg = document.querySelector('.review__img')
     offerSection = document.querySelector('.offers__desktop')
     offerTitle = document.querySelector('.offers__title-desktop')
@@ -160,10 +160,10 @@ const handleReview = () => {
     const reviewSectionTop = reviewSection.getBoundingClientRect().top;
 
     if (reviewSectionTop <= windowHeight * 0.7) {
-        reviewTitle.classList.add('activeTitle')
+        reviewTitle.classList.add('activeReviewTitle')
         reviewImg.classList.add('activeReviewImg')
     } else {
-        reviewTitle.classList.remove('activeTitle')
+        reviewTitle.classList.remove('activeReviewTitle')
         reviewImg.classList.remove('activeReviewImg')
     }
 

@@ -203,17 +203,17 @@
          }
      }
 
-     .review{
-                &__header {
-                        font-size: 3rem;
-    
-                
-                    }
-                
-                    &__text {
-                        
-                        font-size: 2rem;
-                    }
+     .review {
+         &__header {
+             font-size: 3rem;
+
+
+         }
+
+         &__text {
+
+             font-size: 2rem;
+         }
      }
 
  }
@@ -223,17 +223,18 @@
 
  @media (min-width: 670px) {
 
-        .nav {
-                &__item {
-                    &--mobile {
-                        font-size: 2.1rem;
-                    }
-                }
-        
-                &__link {
-                    font-size: 2.1rem;
-                }
-            }
+     .nav {
+         &__item {
+             &--mobile {
+                 font-size: 2.1rem;
+             }
+         }
+
+         &__link {
+             font-size: 2.1rem;
+         }
+     }
+
      .hero {
          &__video {
              height: 400px;
@@ -311,15 +312,33 @@
          }
      }
 
-     .review{
-        &__img{
-            display: block;
-            z-index: 100;
-            position: absolute;
-            bottom: -200px;
-            left: 5px;
-            height: 250px;
-            width: 170px;
-        }
+     .review {
+         &__img {
+            opacity: 0;
+             display: block;
+             z-index: 100;
+             position: absolute;
+             bottom: -200px;
+             left: 5px;
+             height: 240px;
+             width: 170px;
+         }
+
+
+     }
+
+     .activeReviewImg {
+         animation: handleShowReviewImg 2s ease-in-out forwards;
+     }
+
+     @keyframes handleShowReviewImg {
+         0% {
+             opacity: 0;
+         }
+
+         100% {
+             opacity: 1;
+         }
+
      }
  }
