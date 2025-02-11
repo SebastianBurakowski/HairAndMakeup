@@ -6,6 +6,11 @@
 // }
 
 @use '../variables' as *;
+@media (min-width: 1024px) and (height: 1366px) {
+    .review {
+        height: 50vh;
+    }
+}
 
 @media (min-width: 768px) {
 
@@ -334,7 +339,7 @@
 
     .review {
 
-        height: 80vh;
+        height: 610px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -409,7 +414,7 @@
             align-items: center;
             height: 90%;
             width: 95%;
-            
+
             padding: 1em 2em;
         }
 
@@ -533,6 +538,10 @@
     .contact {
 
         margin-top: 11em;
+
+        &__travel{
+            margin-top: 0;
+        }
 
         &__title {
             font-size: 3.5rem;
@@ -720,16 +729,8 @@
     .contact {
         margin-top: 20em;
 
+        &__travel {
+            margin-top: 0;
+        }
     }
-}
-
-
-
- @media (max-width: 820px) and (max-height: 1180px){
-   .review{
-    &__boxes{
-        height: 50%;
-        background-color: red;
-    }
-   }
 }

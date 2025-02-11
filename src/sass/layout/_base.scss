@@ -114,11 +114,6 @@
             text-decoration: none;
             text-transform: uppercase;
             font-size: 1.7rem;
-            transition: background-color 1s;
-
-            &:hover {
-                background-color: rgba(2, 0, 0, 0.615);
-            }
         }
 
 
@@ -423,14 +418,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    padding-bottom: 2em;
 
-&__list{
-    padding: .5em;
+    &__list {
+        padding: .5em;
 
-    &--top{
-        border-bottom: 1px solid $light-white;
+        &--top {
+            border-bottom: 1px solid $light-white;
+        }
     }
-}
 
 
     &__hero {
@@ -487,9 +483,13 @@
     }
 
     &__back {
+       
+        position: absolute;
+        bottom: 0;
+        left: 0;
         font-family: "Playfair Display", serif;
         color: $light-white;
-        display: block;
+        display: none;
         margin-top: 50px;
         font-size: 1.6rem;
         font-weight: bold;
@@ -509,7 +509,7 @@
         text-decoration: none;
         color: $pure-white;
         font-size: 2.3rem;
-        width:200px;
+        width: 200px;
         text-align: center;
         font-family: "Linden Hill", serif;
         font-weight: lighter;
@@ -747,8 +747,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 90%;
-        width: 95%;
+        width: 90%;
         background-color: $lighter-green;
         padding: .5em .5em;
     }
@@ -869,10 +868,15 @@
     margin-top: 4em;
     border-top: 1px solid $main-color;
     background-color: $dark;
-    height: 50vh;
     border-radius: 20px 20px 0 0;
-
     backdrop-filter: blur(10px);
+
+
+    &__travel {
+        position: relative;
+        border-radius: 0 0 0 0;
+        margin-top: 0;
+    }
 
     &__title {
         font-family: "Linden Hill", serif;
@@ -1016,14 +1020,5 @@
         display: block;
         color: $light-white;
         padding: 0 .5em;
-    }
-}
-
-
-@media screen and (orientation: landscape) {
-    .contact {
-
-            height: 80vh;
-
     }
 }

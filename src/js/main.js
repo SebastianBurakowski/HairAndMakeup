@@ -17,6 +17,7 @@ let offerTitle;
 let navMobile;
 let navMobileEl;
 let burgerBtn;
+let burgerBars;
 
 
 const prepareDomElements = () => {
@@ -43,6 +44,7 @@ const prepareDomElements = () => {
     navMobile = document.querySelector('.nav__mobile')
     burgerBtn = document.querySelector('.burger-btn')
     navMobileEl = document.querySelectorAll('.nav__item--mobile')
+    burgerBars = document.querySelector('.burger-btn__bars')
 
 
 }
@@ -52,6 +54,17 @@ const windowHeight = window.innerHeight;
 const handleBurger = () => {
     burgerBtn.classList.toggle('burger-active')
     
+}
+
+const handleColorBurger = () => {
+    const top = windowHeight + 60;
+
+    if(scrollY >= top) {
+        burgerBars.classList.add('black-bars-color')
+    }else {
+        burgerBars.classList.remove('black-bars-color')
+    
+}
 }
 
 
@@ -184,6 +197,7 @@ const handleReview = () => {
 const prepareDomEvents = () => {
 
     ////////// WYWOŁANIE FUNKCJI ///////////////////
+    window.addEventListener("scroll", handleColorBurger);
     window.addEventListener("scroll", handleShowAbout);
     window.addEventListener("scroll", handleShowHero);
     accordeonBtns.forEach(btn =>
