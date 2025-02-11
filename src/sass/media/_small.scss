@@ -98,6 +98,24 @@
          }
      }
 
+     .contact {
+         &__title {
+             font-size: 3rem;
+         }
+
+         &__text {
+             font-size: 2.3rem;
+
+
+         }
+
+         &__instagram,
+         &__phone,
+         &__facebook {
+                font-size: 2rem;            
+         }
+
+     }
  }
 
 
@@ -312,21 +330,6 @@
          }
      }
 
-     .review {
-         &__img {
-            opacity: 0;
-             display: block;
-             z-index: 100;
-             position: absolute;
-             bottom: -200px;
-             left: 5px;
-             height: 240px;
-             width: 170px;
-         }
-
-
-     }
-
      .activeReviewImg {
          animation: handleShowReviewImg 2s ease-in-out forwards;
      }
@@ -341,4 +344,24 @@
          }
 
      }
+
+                  .contact {
+                
+                      &__title {
+                          font-size: 3rem;
+                      }
+        
+                      &__text {
+                          font-size: 2.3rem;
+        
+        
+                      }
+        
+                      &__instagram,
+                      &__phone,
+                      &__facebook {
+                          font-size: 2rem;
+                      }
+        
+                  }
  }

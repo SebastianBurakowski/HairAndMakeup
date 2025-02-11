@@ -94,7 +94,7 @@
 
     &__items {
         &--mobile {
-            height: 80%;
+            height: 100%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -424,10 +424,13 @@
     background-size: cover;
     overflow: hidden;
 
-    &__list {
-        border-bottom: 1px solid rgba(194, 193, 193, 0.548);
-    }
+&__list{
+    padding: .5em;
 
+    &--top{
+        border-bottom: 1px solid $light-white;
+    }
+}
 
 
     &__hero {
@@ -488,16 +491,57 @@
         color: $light-white;
         display: block;
         margin-top: 50px;
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         font-weight: bold;
-        padding: .5em 1em;
+        padding: .5em;
         text-decoration: none;
         letter-spacing: 1px;
     }
 
     &__faq {
-        margin-top: 2em;
         padding: .5em 1em;
+    }
+
+    &__instagram {
+        text-align: center;
+        position: relative;
+        display: block;
+        text-decoration: none;
+        color: $pure-white;
+        font-size: 2.3rem;
+        width:200px;
+        text-align: center;
+        font-family: "Linden Hill", serif;
+        font-weight: lighter;
+        border: none;
+        padding: .2em 0;
+        margin: 1em auto;
+        background-color: transparent;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 20%;
+            height: 1px;
+            background-color: $pure-white;
+            transform: translateX(-50%);
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 20%;
+            height: 1px;
+            background-color: $pure-white;
+            transform: translateX(-50%);
+
+        }
+
     }
 }
 
@@ -705,7 +749,7 @@
         align-items: center;
         height: 90%;
         width: 95%;
-        background-color: $pink-color;
+        background-color: $lighter-green;
         padding: .5em .5em;
     }
 
@@ -818,10 +862,16 @@
 }
 
 .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin-top: 4em;
     border-top: 1px solid $main-color;
     background-color: $dark;
+    height: 50vh;
+    border-radius: 20px 20px 0 0;
+
     backdrop-filter: blur(10px);
 
     &__title {
@@ -836,9 +886,10 @@
 
     }
 
-    &__text{
-        font-size: 2rem;
+    &__text {
+        font-size: 1.8rem;
         padding: .5em 1em;
+        color: $light-white;
         text-align: center;
     }
 
@@ -869,11 +920,6 @@
         }
     }
 
-
-    &__text {
-        color: $light-white;
-    }
-
     &__hero {
         opacity: .2;
         z-index: -1;
@@ -886,40 +932,98 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 20px 20px 0 0;
+
     }
 }
 
-.footer{
+.footer {
+
     background-color: black;
 
-    &__title{
+    &__info {
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    &__title {
         font-family: "Linden Hill", serif;
         font-weight: normal;
         text-transform: uppercase;
-        color:$light-white;
-        font-size: 1.2rem;
-        padding: .5em 2em;
+        color: $light-white;
+        font-size: 1.6rem;
+
         text-align: center;
     }
 
-    &__map{
+    &__map {
         color: $light-white;
+    }
+
+    &__year {
+        text-align: center;
+        font-family: "Linden Hill", serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: $light-white;
+
+
     }
 }
 
-.sitemap{
-    &__title{
+.sitemap {
+
+    &__title {
+        text-align: center;
         display: block;
         text-decoration: none;
         font-size: 1.8rem;
+        font-weight: 500;
+        padding: .5em 0;
         color: $light-white;
-        padding: 1em .5em;
         cursor: pointer;
+
     }
 
-    &__element{
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: .5em 0;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+    }
+
+    &__element {
+        text-decoration: none;
+        cursor: pointer;
+
+
+        &:hover {
+            border-bottom: 1px solid $light-white;
+        }
+    }
+
+    &__element {
         display: block;
         color: $light-white;
         padding: 0 .5em;
+    }
+}
+
+
+@media screen and (orientation: landscape) {
+    .contact {
+
+            height: 80vh;
+
     }
 }

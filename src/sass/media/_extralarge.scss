@@ -51,12 +51,14 @@
             font-size: 7rem;
         }
 
-        &__img{
+        &__img {
             left: -200px;
         }
     }
-
-
+        .contact {
+            height: 60vh;
+    
+        }
 }
 
 @media (min-width: 1800px) {
@@ -94,5 +96,8 @@
             font-size: 8rem;
         }
     }
+
+
+
 
 }

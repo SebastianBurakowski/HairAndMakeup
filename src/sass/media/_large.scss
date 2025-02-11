@@ -163,4 +163,23 @@
             left: -150px;
         }
     }
+
+          .contact {
+              &__title {
+                  font-size: 5rem;
+              }
+    
+              &__text {
+                  font-size: 2.5rem;
+    
+    
+              }
+    
+              &__instagram,
+              &__phone,
+              &__facebook {
+                  font-size: 2.3rem;
+              }
+    
+          }
 }
