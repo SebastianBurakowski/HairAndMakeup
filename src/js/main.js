@@ -18,6 +18,7 @@ let navMobile;
 let navMobileEl;
 let burgerBtn;
 let burgerBars;
+let footerSpan;
 
 
 const prepareDomElements = () => {
@@ -45,11 +46,17 @@ const prepareDomElements = () => {
     burgerBtn = document.querySelector('.burger-btn')
     navMobileEl = document.querySelectorAll('.nav__item--mobile')
     burgerBars = document.querySelector('.burger-btn__bars')
+    footerSpan = document.querySelector('.footer__year')
 
 
 }
 const windowHeight = window.innerHeight;
 //FUNCTIONS
+const handleYear = () => {
+    const year = (new Date).getFullYear()
+    footerSpan.innerText = year
+
+}
 
 const handleBurger = () => {
     burgerBtn.classList.toggle('burger-active')
@@ -210,6 +217,7 @@ const prepareDomEvents = () => {
         btn.addEventListener('click', handleCloseNavMobile)
     )
     burgerBtn.addEventListener("click", () => { handleBurger(); showNav(); })
+    handleYear()
 
 
 }

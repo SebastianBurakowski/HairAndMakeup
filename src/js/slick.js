@@ -19,6 +19,9 @@ $(document).ready(function () {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
+                    arrows: true, // Włączone od 771px wzwyż
+                    nextArrow: '<button class="review__slick" type="button"><i class="fa-solid fa-caret-right fa-beat-fade"></i></button>',
+                    prevArrow: '<button class="review__slick" type="button"><i class="fa-solid fa-caret-left fa-beat-fade"></i></button>'
                 }
             }
         ]
