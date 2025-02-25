@@ -393,6 +393,10 @@
         }
 
         &__img {
+            background-image: url('../../../dist/img/review_img.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             z-index: 101;
             position: absolute;
             display: block;
@@ -400,6 +404,7 @@
             left: -80px;
             width: 200px;
             height: 270px;
+
 
 
         }
@@ -539,7 +544,7 @@
 
         margin-top: 11em;
 
-        &__travel{
+        &__travel {
             margin-top: 0;
         }
 
@@ -553,8 +558,22 @@
 
     }
 
+    .gallery {
+        &__elements {
+            flex-direction: row;
+            width: 100%;
+        }
+
+        &__element {
+            height: 80vh;
+            flex: 1;
+        }
+    }
+
 
 }
+
+
 
 
 

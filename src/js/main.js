@@ -18,7 +18,6 @@ let navMobile;
 let navMobileEl;
 let burgerBtn;
 let burgerBars;
-let footerSpan;
 
 
 const prepareDomElements = () => {
@@ -46,17 +45,12 @@ const prepareDomElements = () => {
     burgerBtn = document.querySelector('.burger-btn')
     navMobileEl = document.querySelectorAll('.nav__item--mobile')
     burgerBars = document.querySelector('.burger-btn__bars')
-    footerSpan = document.querySelector('.footer__year')
+   
 
 
 }
 const windowHeight = window.innerHeight;
 //FUNCTIONS
-const handleYear = () => {
-    const year = (new Date).getFullYear()
-    footerSpan.innerText = year
-
-}
 
 const handleBurger = () => {
     burgerBtn.classList.toggle('burger-active')
@@ -66,12 +60,16 @@ const handleBurger = () => {
 const handleColorBurger = () => {
     const top = windowHeight + 60;
 
-    if(scrollY >= top) {
+   
+          if(scrollY >= top) {
         burgerBars.classList.add('black-bars-color')
     }else {
         burgerBars.classList.remove('black-bars-color')
     
-}
+}  
+    
+
+
 }
 
 
@@ -152,6 +150,7 @@ const handleShowHero = () => {
 
 
 const handlePortfolio = () => {
+    if (!portfolioSection) return;
     const portfolioSectionTop = portfolioSection.getBoundingClientRect().top;
 
     if (portfolioSectionTop <= windowHeight * 0.3) {
@@ -204,20 +203,26 @@ const handleReview = () => {
 const prepareDomEvents = () => {
 
     ////////// WYWOŁANIE FUNKCJI ///////////////////
-    window.addEventListener("scroll", handleColorBurger);
+
+    if (document.body.classList.contains('home')){
+          window.addEventListener("scroll", handleColorBurger);
     window.addEventListener("scroll", handleShowAbout);
     window.addEventListener("scroll", handleShowHero);
-    accordeonBtns.forEach(btn =>
-        btn.addEventListener('click', ShowAccordeon.bind(btn))
-    )
+
     window.addEventListener("scroll", handlePortfolio);
     window.addEventListener("scroll", handleReview);
-    window.addEventListener("scroll", handleOffer);
+    window.addEventListener("scroll", handleOffer);  
+    }
+
+    
+    
     navMobileEl.forEach(btn =>
         btn.addEventListener('click', handleCloseNavMobile)
     )
     burgerBtn.addEventListener("click", () => { handleBurger(); showNav(); })
-    handleYear()
+    accordeonBtns.forEach(btn =>
+        btn.addEventListener('click', ShowAccordeon.bind(btn))
+    )
 
 
 }

@@ -413,14 +413,16 @@
 .rules {
     z-index: 2;
     position: relative;
-    background-image: url(../dist/img/header_img.jpg);
+    background-image: url('../../../dist/img/header_img.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     padding-bottom: 2em;
+    border-bottom: 1px solid $main-color;
 
     &__list {
+        text-align: center;
         padding: .5em;
 
         &--top {
@@ -467,8 +469,8 @@
     }
 
     &__items {
-        text-align: center;
-        list-style: none;
+
+        list-style: inside;
         padding: 1em 0;
     }
 
@@ -483,7 +485,7 @@
     }
 
     &__back {
-       
+
         position: absolute;
         bottom: 0;
         left: 0;
@@ -542,6 +544,54 @@
 
         }
 
+    }
+
+    &__gallery {
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+}
+
+.gallery {
+
+    &__elements {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    &__element {
+        height: 60vh;
+        width: 100vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &-1 {
+            background-image: url('../../../dist/img/travel_1.jpg');
+
+        }
+
+        &-2 {
+            background-image: url('../../../dist/img/travel_2.jpg');
+        }
+
+        &-3 {
+            background-image: url('../../../dist/img/travel_4.jpg');
+        }
+
+        &-4 {
+            background-image: url('../../../dist/img/travel_3.jpg');
+        }
     }
 }
 
@@ -654,7 +704,7 @@
         opacity: 1;
         object-fit: cover;
         height: 400px;
-        border-radius: 20px;
+        border-radius: 8px;
         overflow: hidden;
         box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.5);
     }
@@ -705,6 +755,68 @@
         font-size: 9rem;
     }
 
+}
+
+.image-position {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-1 {
+    background-image: url(../../../dist/img/portfolio_1.jpg);
+}
+
+.image-2 {
+    background-image: url(../../../dist/img/portfolio_2.jpg);
+}
+
+.image-3 {
+    background-image: url(../../../dist/img/portfolio_3.jpg);
+}
+
+.image-4 {
+    background-image: url(../../../dist/img/portfolio_4.jpg);
+}
+
+.image-5 {
+    background-image: url(../../../dist/img/portfolio_5.jpg);
+}
+
+.image-7 {
+    background-image: url(../../../dist/img/portfolio_7.jpg);
+}
+
+.image-8 {
+    background-image: url(../../../dist/img/portfolio_8.jpg);
+}
+
+.image-9 {
+    background-image: url(../../../dist/img/portfolio_9.jpg);
+}
+
+.image-10 {
+    background-image: url(../../../dist/img/portfolio_10.jpg);
+}
+
+.image-11 {
+    background-image: url(../../../dist/img/portfolio_11.jpg);
+}
+
+.image-12 {
+    background-image: url(../../../dist/img/portfolio_12.jpg);
+}
+
+.image-13 {
+    background-image: url(../../../dist/img/portfolio_13.jpg);
+}
+
+.image-14 {
+    background-image: url(../../../dist/img/portfolio_14.jpg);
+}
+
+.image-15 {
+    background-image: url(../../../dist/img/portfolio_15.jpg);
 }
 
 
@@ -932,7 +1044,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(dist/img/contact_bck.jpg);
+        background-image: url('../../../dist/img/contact_background.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -956,69 +1068,24 @@
         text-transform: uppercase;
         color: $light-white;
         font-size: 1.6rem;
-
         text-align: center;
     }
 
     &__map {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         color: $light-white;
     }
 
-    &__year {
-        text-align: center;
-        font-family: "Linden Hill", serif;
-        font-weight: normal;
-        text-transform: uppercase;
-        color: $light-white;
-
-
-    }
-}
-
-.sitemap {
-
-    &__title {
+    &__text {
         text-align: center;
         display: block;
         text-decoration: none;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 500;
         padding: .5em 0;
         color: $light-white;
         cursor: pointer;
-
-    }
-
-    &__main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding-top: .5em 0;
-    }
-
-    &__list {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: row;
-        list-style: none;
-        width: 100%;
-    }
-
-    &__element {
-        text-decoration: none;
-        cursor: pointer;
-
-
-        &:hover {
-            border-bottom: 1px solid $light-white;
-        }
-    }
-
-    &__element {
-        display: block;
-        color: $light-white;
-        padding: 0 .5em;
     }
 }
